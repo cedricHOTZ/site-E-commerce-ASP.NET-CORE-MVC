@@ -36,8 +36,8 @@ namespace ProjetAspCore
             services.AddControllersWithViews();
 
             //Création des instances Book et Category
-            services.AddScoped<IBookRepository, MookBookRepository>();
-            services.AddScoped<ICategoryRepository, MookCategoryRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
 
            
            
