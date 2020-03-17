@@ -1,0 +1,19 @@
+﻿@model ProjetAspCore.ViewsModels.BookListViewModel
+
+<html>
+
+<head>
+    La liste des livres
+</head>
+
+<body>
+    @foreach (var book in Model.Books)
+    {
+        <h1>@book.Name</h1>
+        <h2>@book.ShortDescription</h2>
+        <h3>@book.Price.ToString("c")</h3>
+        <h5>@book.Category.CategoryName</h5>
+    }
+
+</body>
+</html>
