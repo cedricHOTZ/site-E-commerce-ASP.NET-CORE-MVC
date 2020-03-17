@@ -17,7 +17,7 @@ namespace ProjetAspCore
     public class Startup
     {
         private readonly IConfiguration _configuration;
-        Startup(IConfiguration configuration)
+       public Startup(IConfiguration configuration)
         {
             _configuration = configuration;
 
