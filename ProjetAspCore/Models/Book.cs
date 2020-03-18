@@ -27,5 +27,7 @@ namespace ProjetAspCore.Models
 
         public Category Category { get; set; }
 
+        public string Notes { get; set; }
+
     }
 }

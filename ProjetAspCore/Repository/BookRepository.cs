@@ -9,7 +9,7 @@ namespace ProjetAspCore.Repository
 {
     public class BookRepository : IBookRepository
     {
-        public readonly AppDbContext _appDbContext;
+        private readonly AppDbContext _appDbContext;
 
         public BookRepository(AppDbContext appDbContext)
         {

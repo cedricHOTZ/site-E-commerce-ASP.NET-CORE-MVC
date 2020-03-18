@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjetAspCore.Models;
 using ProjetAspCore.Repository;
+using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace ProjetAspCore
 {
@@ -27,10 +28,7 @@ namespace ProjetAspCore
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //Bdd
-            services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))
-            );
+           
 
             // framework mvc
             services.AddControllersWithViews();
@@ -39,8 +37,12 @@ namespace ProjetAspCore
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
 
-           
-           
+            //Bdd
+            services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))
+            );
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
