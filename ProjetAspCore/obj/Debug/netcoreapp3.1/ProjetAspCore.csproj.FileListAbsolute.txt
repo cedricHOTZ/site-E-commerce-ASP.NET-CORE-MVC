@@ -133,3 +133,4 @@ C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Pro
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\ProjetAspCore.pdb
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\ProjetAspCore.genruntimeconfig.cache
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\ProjetAspCore.csprojAssemblyReference.cache
+C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs

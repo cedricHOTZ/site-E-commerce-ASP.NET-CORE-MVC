@@ -1,0 +1,12 @@
+﻿@model ProjetAspCore.ViewsModels.BookListViewModel
+<div class="row text-center">
+    <img style="margin-left:3%" src="https://cdn.pixabay.com/photo/2016/02/19/11/53/book-1210030_960_720.jpg" alt="" width="1100" height="500"/>
+</div>
+@foreach (var book in Model.Books)
+{
+    <h1>@book.Name</h1>
+    <img src="@book.ImageUrl" />
+    <h2>@book.ShortDescription</h2>
+    <h3>@book.Price.ToString("c")</h3>
+   
+}
