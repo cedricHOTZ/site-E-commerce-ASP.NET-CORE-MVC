@@ -15,7 +15,7 @@ namespace ProjetAspCore.Models
         }
         public DbSet<Book> Books { get; set; }
         public DbSet<Category> Categories { get; set; }
-
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -42,7 +42,8 @@ namespace ProjetAspCore.Models
               ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/41mAlr%2B%2BiiL._SX352_BO1,204,203,200_.jpg",
               InStock = true,
               ShortDescription = "Vous rêvez d'apprendre à créer des sites web mais vous avez peur que ce soit compliqué car vous débutez ? Ce livre est fait pour vous ! Conçu pour les débutants, il vous permettra de découvrir HTML 5 et CSS 3, les dernières technologies en matière de création de sites web, de façon progressive et sans aucun prérequis, si ce n'est de savoir allumer son ordinateur !",
-              CategoryId = 1
+              CategoryId = 1,
+              Notes = 4
 
           }
             );
@@ -56,6 +57,7 @@ namespace ProjetAspCore.Models
      InStock = true,
      ShortDescription = "Vous connaissez le HTML et vous avez toujours rêvé de créer un site web dynamique, avec votre propre blog, vos forums et votre espace membres ? Ne cherchez plus ! Découvrez dans ce livre dédié aux débutants comment utiliser les langages les plus célèbres du web dynamique : PHP et MySQL.",
      Price = 120.90M,
+     Notes = 5,
      CategoryId = 1
  }
   );
@@ -70,6 +72,7 @@ namespace ProjetAspCore.Models
       InStock = true,
       ShortDescription = "Développeur passionné depuis de nombreuses années, Daniel DJORDJEVIC a toujours porté de l'intérêt aux technologies web. Aujourd'hui développeur Full Stack, il intervient sur toute la stack des nouveaux projets, notamment avec Angular et ASP.NET Core au sein du cloud Microsoft Azure.",
       Price = 66,
+      Notes = 2,
       CategoryId = 2
   }
   );
@@ -83,7 +86,8 @@ namespace ProjetAspCore.Models
      ImageUrl = "https://images-na.ssl-images-amazon.com/images/I/515oQ2Lv8tL._SX331_BO1,204,203,200_.jpg",
      InStock = true,
      ShortDescription = "Cet ouvrage vous permettra entre autres de créer des applications web autonomes, mais également de les interfacer avec un serveur en utilisant Ajax. Et surtout, vous comprendrez comment augmenter la complexité de votre application tout en conservant un code bien structuré, ceci grâce à React mais aussi Redux, étudié dans les derniers chapitres de l'ouvrage.",
-     CategoryId = 2
+     CategoryId = 2,
+     Notes = 3
  }
 );
 
@@ -97,7 +101,8 @@ new Book
     InStock = true,
     ShortDescription = "Développeur passionné depuis de nombreuses années, Daniel DJORDJEVIC a toujours porté de l'intérêt aux technologies web. Aujourd'hui développeur Full Stack, il intervient sur toute la stack des nouveaux projets, notamment avec Angular et ASP.NET Core au sein du cloud Microsoft Azure.",
     Price = 66,
-    CategoryId = 3
+    CategoryId = 3,
+    Notes = 5
 }
 );
 
@@ -112,7 +117,8 @@ new Book
                                  InStock = true,
                                  ShortDescription = "Ingénieur .NET depuis 2015 et reconnu MVP (Most Valuable Professional), Christophe GIGAX travaille avec ASP.NET Core depuis la sortie des premières versions. Il a suivi l'évolution de la technologie et a ainsi acquis une solide expertise sur le sujet, confortée par ses diverses réalisations. Au travers de ce livre il partage avec plaisir toute cette expérience avec les lecteurs.",
                                  Price = 89,
-                                 CategoryId = 3
+                                 CategoryId = 3,
+                                 Notes = 5
                              }
 );
             modelBuilder.Entity<Book>().HasData(
@@ -126,7 +132,8 @@ new Book
               InStock = true,
               ShortDescription = "Léonard LABAT est Consultant Formateur depuis plusieurs années. Spécialiste des technologies .NET, il est certifié MCSD Web Developer. Titulaire d'un master en Informatique et Architecture logicielle, Anna YAFI est Consultant / Développeur .",
               Price = 55.60M,
-              CategoryId = 4
+              CategoryId = 4,
+              Notes = 4
           }
 );
             modelBuilder.Entity<Book>().HasData(
@@ -140,7 +147,8 @@ new Book
     InStock = true,
     ShortDescription = "Consultant et Formateur depuis plusieurs années, Sébastien PUTIER apporte son expertise dans la mise en oeuvre de solutions Windows, Web et mobiles avec la plateforme .NET depuis ses premières versions. Il est certifié techniquement (MCPD - MCSD) et pédagogiquement (MCT) par Microsoft.",
     Price = 98,
-    CategoryId = 4
+    CategoryId = 4,
+    Notes = 2
 }
 );
 

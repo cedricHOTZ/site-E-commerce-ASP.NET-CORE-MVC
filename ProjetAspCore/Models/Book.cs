@@ -20,14 +20,14 @@ namespace ProjetAspCore.Models
         public decimal Price { get; set; }
         public string ImageUrl { get; set; }
         public bool InStock { get; set; }
-       
+        public decimal Notes { get; set; }
         //clé étrangère
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
 
         public Category Category { get; set; }
 
-        public string Notes { get; set; }
+       
 
     }
 }

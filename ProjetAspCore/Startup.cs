@@ -41,7 +41,8 @@ namespace ProjetAspCore
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))
             );
-
+            //session
+            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
 
         }
 
