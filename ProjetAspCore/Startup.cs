@@ -42,6 +42,8 @@ namespace ProjetAspCore
             options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))
             );
             //session
+            services.AddHttpContextAccessor();
+            services.AddSession();
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
 
         }
@@ -58,7 +60,8 @@ namespace ProjetAspCore
          
             // ajout du css,javascript,image
             app.UseStaticFiles();
-
+            //session
+            app.UseSession();
             //routage
             app.UseRouting();
 
