@@ -3,17 +3,24 @@
 <html>
 
 <head>
-    La liste des livres
+    
 </head>
 
 <body>
     @foreach (var book in Model.Books)
     {
-        <h1>@book.Name</h1>
-        <img src="@book.ImageUrl" />
-        <h2>@book.ShortDescription</h2>
-        <h3>@book.Price.ToString("c")</h3>
-
+    <div class="mt-5 col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <h1>
+                <a asp-controller="Book" asp-action="Detail" asp-route-idBook="@book.BookId"> @book.Name</a>
+            </h1>
+            <img src="@book.ImageUrl" alt="" widht="150" width="400" />
+            <div class="caption">
+                <p>@book.ShortDescription</p>
+                <h3 class="pull-right">@book.Price.ToString("c")</h3>
+            </div>
+            </div>
+        </div>
     }
 
 </body>

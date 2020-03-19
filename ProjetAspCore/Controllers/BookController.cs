@@ -27,5 +27,16 @@ namespace ProjetAspCore.Controllers
             bookListViewModel.Books = _bookRepository.GetAllBooks();
             return View(bookListViewModel);
         }
+
+        public IActionResult Detail(int idBook)
+        {
+            var book = _bookRepository.GetBookById(idBook);
+            if(book == null)
+            {
+                return NotFound();
+                
+            }
+            return View(book);
+        }
     }
 }

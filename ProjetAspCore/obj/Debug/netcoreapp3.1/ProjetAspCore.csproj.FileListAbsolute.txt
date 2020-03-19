@@ -139,6 +139,7 @@ C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\bin\Debug\netcoreapp3.1\Mic
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\ProjetAspCore.csproj.CoreCompileInputs.cache
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\ProjetAspCore.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\ViewImports.cshtml.g.cs
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\Book\Detail.cshtml.g.cs
+C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs

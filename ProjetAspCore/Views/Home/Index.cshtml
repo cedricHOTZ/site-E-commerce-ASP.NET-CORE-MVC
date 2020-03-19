@@ -1,12 +1,21 @@
 ﻿@model ProjetAspCore.ViewsModels.BookListViewModel
-<div class="row text-center">
-    <img style="margin-left:3%" src="https://cdn.pixabay.com/photo/2016/02/19/11/53/book-1210030_960_720.jpg" alt="" width="1100" height="500"/>
-</div>
+    <div class="mt-5 row text-center">
+        <img src="~/images/book.jpg" class="img-fluid" alt="Responsive image">
+       
+    </div>
 @foreach (var book in Model.Books)
 {
-    <h1>@book.Name</h1>
-    <img src="@book.ImageUrl" />
-    <h2>@book.ShortDescription</h2>
-    <h3>@book.Price.ToString("c")</h3>
+    <div class="mt-5 col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <h2>
+                <a asp-controller="Book" asp-action="Detail" asp-route-idBook="@book.BookId">@book.Name</a>
+            </h2>
+            <img src="@book.ImageUrl" alt="" width="150" height="400"/>
+            <div class="caption">
+                <p>@book.ShortDescription</p>
+                <h3 class="pull-right">@book.Price.ToString("c")</h3>
+            </div>
+        </div>
+    </div>
    
 }
