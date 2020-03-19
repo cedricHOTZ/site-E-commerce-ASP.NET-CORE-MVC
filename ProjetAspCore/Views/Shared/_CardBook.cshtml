@@ -1,0 +1,14 @@
+﻿@model Book
+
+<div class="mt-5 col-sm-4 col-lg-4 col-md-4">
+    <div class="thumbnail">
+        <h1>
+            <a asp-controller="Book" asp-action="Detail" asp-route-idBook="@Model.BookId"> @Model.Name</a>
+        </h1>
+        <img src="@Model.ImageUrl" alt="" widht="150" width="400" />
+        <div class="caption">
+            <p>@Model.ShortDescription</p>
+            <h3 class="pull-right">@Model.Price.ToString("c")</h3>
+        </div>
+    </div>
+</div>
