@@ -145,3 +145,4 @@ C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Raz
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CardBook.cshtml.g.cs
 C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\Index.cshtml.g.cs
+C:\Users\Utilisateur\Documents\Asp.net\ProjetAspCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\ShoppingCartSummary\Default.cshtml.g.cs
