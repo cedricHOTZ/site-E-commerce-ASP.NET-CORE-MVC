@@ -18,8 +18,8 @@ namespace ProjetAspCore.Models
         //Adresse 1
         public string AddressLine1 { get; set; }
 
-        public string AdressLine2 { get; set; }
-
+        public string AddressLine2 { get; set; }
+        public string ZipCode { get; set; }
         public string City { get; set; }
         public string State { get; set; }
 

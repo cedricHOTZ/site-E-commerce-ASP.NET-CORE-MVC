@@ -45,6 +45,7 @@ namespace ProjetAspCore
             services.AddHttpContextAccessor();
             services.AddSession();
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
         }
 
