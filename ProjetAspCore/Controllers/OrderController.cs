@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjetAspCore.Models;
 using ProjetAspCore.Repository;
 
 namespace ProjetAspCore.Controllers
 {
+   
     public class OrderController : Controller
     {
         private readonly IOrderRepository _orderRepository;
         private readonly ShoppingCart _shoppingCart;
-
-        public OrderController(IOrderRepository orderRepository ,ShoppingCart shoppingCart)
+        public OrderController(IOrderRepository orderRepository, ShoppingCart shoppingCart)
         {
             _orderRepository = orderRepository;
             _shoppingCart = shoppingCart;
@@ -24,6 +25,23 @@ namespace ProjetAspCore.Controllers
         }
         [HttpPost]
         public IActionResult CreateOrder(Order order)
+        {
+            var items = _shoppingCart.GetShoppingCartItems();
+            _shoppingCart.ShoppingCartItems = items;
+            if (_shoppingCart.ShoppingCartItems.Count == 0)
+            {
+                ModelState.AddModelError("", "Your cart is empty, add some Book first");
+            }
+            if (ModelState.IsValid)
+            {
+                _orderRepository.CreateOrder(order);
+                _shoppingCart.ClearCart();
+                return RedirectToAction("ConfirmOrder");
+            }
+            return View(order);
+
+        }
+        public IActionResult ConfirmOrder()
         {
             return View();
         }
