@@ -9,9 +9,10 @@ using ProjetAspCore.Repository;
 
 namespace ProjetAspCore.Controllers
 {
-   
+    [Authorize]
     public class OrderController : Controller
     {
+      
         private readonly IOrderRepository _orderRepository;
         private readonly ShoppingCart _shoppingCart;
         public OrderController(IOrderRepository orderRepository, ShoppingCart shoppingCart)
