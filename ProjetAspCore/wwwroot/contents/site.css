@@ -5,7 +5,9 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-
+.jumbotron{
+    background-image :url(images/book.jpg);
+}
 .slide-image {
     width: 100%;
 }

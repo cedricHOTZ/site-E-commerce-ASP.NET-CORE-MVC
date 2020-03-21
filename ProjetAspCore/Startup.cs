@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,6 +38,7 @@ namespace ProjetAspCore
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
 
+
             //Bdd
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"))
@@ -46,6 +48,9 @@ namespace ProjetAspCore
             services.AddSession();
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
             services.AddScoped<IOrderRepository, OrderRepository>();
+
+            //connexion
+            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
 
         }
 
@@ -65,6 +70,8 @@ namespace ProjetAspCore
             app.UseSession();
             //routage
             app.UseRouting();
+            //connexion utilisateur
+            app.UseAuthentication();
 
             //affichage de fin de l'application
             app.UseEndpoints(endpoints =>
