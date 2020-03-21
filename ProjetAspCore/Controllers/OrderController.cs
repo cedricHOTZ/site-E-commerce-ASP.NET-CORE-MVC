@@ -30,7 +30,7 @@ namespace ProjetAspCore.Controllers
             _shoppingCart.ShoppingCartItems = items;
             if (_shoppingCart.ShoppingCartItems.Count == 0)
             {
-                ModelState.AddModelError("", "Your cart is empty, add some Book first");
+                ModelState.AddModelError("", "Vous devez avoir aumoins un livre dans votre panier");
             }
             if (ModelState.IsValid)
             {
