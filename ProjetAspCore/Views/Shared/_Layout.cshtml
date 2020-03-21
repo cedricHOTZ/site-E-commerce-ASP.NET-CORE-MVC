@@ -24,12 +24,15 @@
                 @await Component.InvokeAsync("ShoppingCartSummary")
                 <a class="nav-item nav-link active" asp-controller="Contact" asp-action="Index">Contact</a>
                
+                <!--Affiche la parti connexion-->
+                <partial name="_LoginPartial"/>
             </div>
     
     </nav>
     <div class="row">
         @RenderBody()
     </div>
+        <!--fichier pour faire fonctionner le fichier _loginPartial-->
     @RenderSection("Scripts", required: false)
     </div>
 </body>

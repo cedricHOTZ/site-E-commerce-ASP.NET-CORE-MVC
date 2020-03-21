@@ -47,6 +47,8 @@ namespace ProjetAspCore
             services.AddHttpContextAccessor();
             services.AddSession();
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+          //View Areas(connexion/deconnexion)
+            services.AddRazorPages();
             services.AddScoped<IOrderRepository, OrderRepository>();
 
             //connexion
@@ -72,7 +74,7 @@ namespace ProjetAspCore
             app.UseRouting();
             //connexion utilisateur
             app.UseAuthentication();
-
+            app.UseAuthorization();
             //affichage de fin de l'application
             app.UseEndpoints(endpoints =>
             {
@@ -80,6 +82,7 @@ namespace ProjetAspCore
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                     );
+                endpoints.MapRazorPages();
             });
         }
     }
